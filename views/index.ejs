@@ -1,0 +1,82 @@
+<%- include("partials/header.ejs") %>
+
+<section id="homepage">
+ 
+    <div class="output">
+   
+    <aside class="sidebar">
+      <h1 class="header"> MY BLOG</h1>
+
+      <div class="create-post">
+        <button id="post"> Create New Post </button>
+      </div>
+
+     
+
+      <div class="Blog-list">
+
+         <p class="blogpost"> BLOG POSTS </p>
+
+        <ul>
+     <li><a href="/post/1">The Shape of the Essay Field</a></li>
+      <li><a href="/post/2">Good Writing</a></li>
+     <li><a href="/post/3">What to Do</a></li>
+     <li><a href="/post/4">The Origins of Wokeness</a></li>
+      <li><a href="/post/5">Writes and Write-Nots</a></li>
+       </ul>
+
+      </div>
+
+    </aside>
+
+    
+  <main>
+
+
+    <button class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+    </button>
+
+   <div class="hero">
+
+        <div class="mobile-header">
+     <h2>Hunter's Blog</h2>
+    <p>Thoughts on writing and life</p>
+    </div>
+
+   <div class="container">
+    
+
+
+    <div class="container">
+    <% blogPosts.forEach(post => { %>
+        <div class="card">
+            <h2><%= post.title %></h2>
+            <p><%= post.excerpt %></p>
+            <a href="/post/<%= post.id %>">Read More →</a>
+        </div>
+    <% }); %>
+</div>
+
+    
+    
+
+   </div>
+
+
+
+
+
+   </div>
+  </main>
+
+
+
+
+
+  </div>
+</section>
+
+<%- include("partials/footer.ejs") %>

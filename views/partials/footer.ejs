@@ -1,0 +1,34 @@
+
+<footer>
+  <p>Made with 💜 by Hunter</p>
+</footer>
+
+
+<script>
+ 
+ const hamburger = document.getElementById("hamburger")
+  const sidebar = document.querySelector(".sidebar")
+  const create = document.getElementById("post")
+
+     create.addEventListener("click", ()=>{
+      window.location.href="/new"
+    })
+   
+      hamburger.addEventListener("click", ()=>{
+    sidebar.classList.toggle('open')
+
+    if(sidebar.classList.contains('open')){
+    hamburger.classList.add("fixed")
+    } else{
+   hamburger.classList.remove("fixed")
+    }
+    }
+   
+
+    
+  )
+  
+</script>
+</body>
+
+</html>
