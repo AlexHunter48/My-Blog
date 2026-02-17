@@ -376,6 +376,7 @@ content : req.body. content
 blogPosts.push(newPost)
 
 res.redirect('/')
+
 })
 
 
